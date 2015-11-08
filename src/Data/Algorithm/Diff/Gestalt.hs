@@ -2,7 +2,7 @@ module Data.Algorithm.Diff.Gestalt
     ( diff
     ) where
 
-import Data.Algorithm.Diff (Diff(..), getGroupedDiff)
+import Data.Algorithm.Diff (Diff(..))
 import Data.List.CommonSubstring
 import Data.Algorithms.KMP
 
