@@ -12,6 +12,10 @@ split needle haystack = let index = head $ match (build needle) haystack
                             (_ , right) = splitAt (index + length needle) haystack
                         in (left, right)
 
+-- | Takes two lists and returns a list of differences between them, grouped into chunks.
+--
+-- >>> diff "tree" "there"
+-- [Both "t" "t",Second "he",Both "re" "re",First "e"]
 diff :: Ord a => [a] -> [a] -> [Diff [a]]
 diff [] [] = []
 diff as [] = [First as]
